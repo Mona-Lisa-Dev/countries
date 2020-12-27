@@ -7,5 +7,30 @@
     <title>Countries</title>
   </head>
 
-  <body></body>
+  <body>
+    <div class="form__group field">
+      <input
+        type="input"
+        class="form__field js-input-search"
+        placeholder=" "
+        name="name"
+        id="country"
+        required
+      />
+      <label for="country" class="form__label"
+        >Which country are you interested in?</label
+      >
+
+      <!-- spinner -->
+      <div class="loader js-loader is-hidden">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+      </div>
+    </div>
+
+    <ol class="js-country-card-list"></ol>
+
+    <div class="js-country-card-container"></div>
+  </body>
 </html>
