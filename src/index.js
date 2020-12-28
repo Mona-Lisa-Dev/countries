@@ -50,21 +50,21 @@ mapContainer.addEventListener('mouseover', event => {
       refs.countryCard.innerHTML = '';
       refs.loader.classList.add('is-hidden');
 
-      if (data.length >= 2) {
-        markup.makeMarkupCountryList(data);
-        warningText.textContent = 'Select the required country from the list';
-        // toastr.info('Select the required country from the list');
-        refs.listItemLink.addEventListener('click', event => {
-          event.preventDefault();
-          const currentValue = event.target.innerText;
-          const selectedCountry = data.find(
-            ({ name }) => name === currentValue,
-          );
-          refs.countryCard.innerHTML = '';
-          markup.makeMarkupCountryItem(selectedCountry);
-        });
-        return;
-      }
+      // if (data.length >= 2) {
+      //   markup.makeMarkupCountryList(data);
+      //   warningText.textContent = 'Select the required country from the list';
+      //   // toastr.info('Select the required country from the list');
+      //   refs.listItemLink.addEventListener('click', event => {
+      //     event.preventDefault();
+      //     const currentValue = event.target.innerText;
+      //     const selectedCountry = data.find(
+      //       ({ name }) => name === currentValue,
+      //     );
+      //     refs.countryCard.innerHTML = '';
+      //     markup.makeMarkupCountryItem(selectedCountry);
+      //   });
+      //   return;
+      // }
 
       markup.makeMarkupCountryItem(countryForMarkup);
     })
