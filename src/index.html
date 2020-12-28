@@ -8,6 +8,13 @@
   </head>
 
   <body>
+    <!-- maps -->
+    <div
+      class="js-map-container"
+      id="container"
+      style="position: relative; width: 500px; height: 300px"
+    ></div>
+
     <div class="form__group field">
       <input
         type="input"
@@ -21,6 +28,8 @@
         >Which country are you interested in?</label
       >
 
+      <p class="js-warning-text"></p>
+
       <!-- spinner -->
       <div class="loader js-loader is-hidden">
         <div class="inner one"></div>
@@ -32,11 +41,5 @@
     <ol class="js-country-card-list"></ol>
 
     <div class="js-country-card-container"></div>
-
-    <!-- maps -->
-    <div
-      id="container"
-      style="position: relative; width: 500px; height: 300px"
-    ></div>
   </body>
 </html>
