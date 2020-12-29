@@ -3,7 +3,6 @@ import refs from './refs';
 function clearCountryMarkup() {
   refs.countryCard.innerHTML = '';
   refs.countryCardList.innerHTML = '';
-  refs.warningText.textContent = '';
 }
 
 function actionsOfError(error) {

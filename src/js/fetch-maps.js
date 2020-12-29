@@ -5,7 +5,8 @@ import helperFunction from './helper-functions';
 
 function overMapHandler(event) {
   let mapCountryCode = '';
-  refs.warningText.textContent = '';
+
+  refs.warningText.classList.add('is-hidden');
 
   if (event.target.nodeName !== 'path') {
     return;
@@ -40,8 +41,7 @@ function overMapHandler(event) {
 
       helperFunction.clearCountryMarkup();
 
-      refs.warningText.textContent =
-        'Sorry, we cannot find information about this country! Please try to enter the name of this country in the search field manually!!!';
+      refs.warningText.classList.remove('is-hidden');
     });
 }
 

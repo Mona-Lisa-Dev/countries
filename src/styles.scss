@@ -33,6 +33,9 @@ ul {
 h2,
 p {
   color: $white;
+
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -51,6 +54,16 @@ body {
   );
 }
 
+.warning-text {
+  display: block;
+  margin-top: 20px;
+  line-height: 20px;
+}
+
+.warning-text.is-hidden {
+  display: none;
+}
+
 .countries-list-item,
 .country-info-item,
 .languages-item {
@@ -63,11 +76,19 @@ body {
   color: $primary;
 }
 
-.wrapper {
-  // display: flex;
+.main-wrapper {
+  display: flex;
+}
 
+.wrapper {
   margin-top: 10px;
   margin-bottom: 10px;
+  flex-basis: 50%;
+}
+
+.map {
+  margin-right: 50px;
+  flex-basis: 50%;
 }
 
 // input
@@ -127,6 +148,65 @@ body {
   border-image: linear-gradient(to right, $primary, $secondary);
   border-image-slice: 1;
 }
+
+// // input
+
+// .form__group {
+//   position: relative;
+//   padding: 15px 0 0;
+
+//   // width: 100%;
+// }
+
+// .form__field {
+//   font-family: inherit;
+//   width: 100%;
+//   border: 0;
+//   border-bottom: 2px solid $gray;
+//   outline: 0;
+//   font-size: 1.3rem;
+//   color: $white;
+//   padding: 7px 0;
+//   background: transparent;
+//   transition: border-color 0.2s;
+
+//   // &::placeholder {
+//   //   color: transparent;
+//   // }
+
+//   &:placeholder-shown ~ .form__label {
+//     font-size: 1.3rem;
+//     cursor: text;
+//     top: 20px;
+//     // top: 0;
+//   }
+// }
+
+// .form__label {
+//   position: absolute;
+//   top: 0;
+//   display: block;
+//   transition: 0.2s;
+//   font-size: 1rem;
+//   color: $gray;
+// }
+
+// .form__field:focus {
+//   ~ .form__label {
+//     position: absolute;
+//     top: 0;
+//     display: block;
+//     transition: 0.2s;
+//     font-size: 1rem;
+//     color: $primary;
+//     font-weight: 700;
+//   }
+//   padding-bottom: 6px;
+//   font-weight: 700;
+//   border-width: 3px;
+//   border-image: linear-gradient(to right, $primary, $secondary);
+//   border-image-slice: 1;
+// }
 /* reset input */
 .form__field {
   &:required,
@@ -208,5 +288,26 @@ body {
   }
   100% {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-wrapper {
+    display: block;
+    padding: 20px;
+  }
+  .map {
+    margin-right: 0;
+  }
+  .form__field {
+    font-size: 1rem;
+
+    &:placeholder-shown ~ .form__label {
+      top: 0;
+      font-size: 1rem;
+    }
+  }
+  .form__label {
+    font-size: 0.7rem;
   }
 }
