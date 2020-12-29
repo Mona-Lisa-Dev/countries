@@ -15,31 +15,35 @@
       style="position: relative; width: 500px; height: 300px"
     ></div>
 
-    <div class="form__group field">
-      <input
-        type="input"
-        class="form__field js-input-search"
-        placeholder=" "
-        name="name"
-        id="country"
-        required
-      />
-      <label for="country" class="form__label"
-        >Which country are you interested in?</label
-      >
+    <div class="wrapper">
+      <div class="form__group field">
+        <input
+          type="input"
+          class="form__field js-input-search"
+          placeholder=" "
+          name="name"
+          id="country"
+          required
+        />
+        <label for="country" class="form__label"
+          >What country are you interested in?</label
+        >
 
-      <p class="js-warning-text"></p>
+        <p class="js-warning-text"></p>
+      </div>
 
-      <!-- spinner -->
-      <div class="loader js-loader is-hidden">
-        <div class="inner one"></div>
-        <div class="inner two"></div>
-        <div class="inner three"></div>
+      <div class="markup-wrapper">
+        <ol class="js-country-card-list"></ol>
+
+        <div class="js-country-card-container"></div>
       </div>
     </div>
 
-    <ol class="js-country-card-list"></ol>
-
-    <div class="js-country-card-container"></div>
+    <!-- spinner -->
+    <div class="loader js-loader is-hidden">
+      <div class="inner one"></div>
+      <div class="inner two"></div>
+      <div class="inner three"></div>
+    </div>
   </body>
 </html>
