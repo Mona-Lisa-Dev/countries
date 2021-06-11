@@ -1,28 +1,26 @@
+import debounce from 'lodash.debounce';
+import Datamap from 'datamaps';
+import toastr from 'toastr';
+
 import './styles.scss';
 import fetchCountries from './js/fetch-countries';
 import markup from './js/make-markup';
 import refs from './js/refs';
 import overMapHandler from './js/fetch-maps';
 import helperFunction from './js/helper-functions';
-import debounce from 'lodash.debounce';
-
-import Datamap from 'datamaps';
-
-import toastr from 'toastr';
 import options from './js/toastr-options';
 
 toastr.options = options;
 
 const map = new Datamap({ element: document.getElementById('container') });
 
-refs.input.addEventListener('input', debounce(inputHandler, 1000));
-refs.mapContainer.addEventListener('mouseover', overMapHandler);
+refs.input.addEventListener('input', debounce(inputHandler, 1500));
+refs.mapContainer.addEventListener('click', overMapHandler);
 
 function inputHandler() {
   let inputValue = refs.input.value;
 
   helperFunction.clearCountryMarkup();
-
   refs.loader.classList.remove('is-hidden');
 
   fetchCountries(inputValue)
