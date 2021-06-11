@@ -9,8 +9,10 @@ import refs from './js/refs';
 import overMapHandler from './js/fetch-maps';
 import helperFunction from './js/helper-functions';
 import options from './js/toastr-options';
+import mediaQuerySetup from './js/media-query-page-reload';
 
 toastr.options = options;
+mediaQuerySetup();
 
 const map = new Datamap({ element: document.getElementById('container') });
 
